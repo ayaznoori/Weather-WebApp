@@ -58,9 +58,11 @@ function success(pos){
 function currentlocation(data){
     
     const  currentt=document.createElement("div");
+    currentt.setAttribute("id","degree");
     currentt.innerHTML=Math.floor(data.main.temp-273)+" <sup>o</sup>C";
     currentt.style.fontSize="60px";
     currentt.style.color="white";
+   
     const  namediv=document.createElement("div");
     namediv.style.lineHeight="10px"
     const  name=document.createElement("p");
@@ -84,6 +86,7 @@ function currentlocation(data){
     dataw.append(icon,dis);
     namediv.append(name,datep);
     document.querySelector("#lcont").innerText="";
+ 
     var map=document.querySelector("iframe");
     map.src=`https://www.google.com/maps/embed/v1/place?key=AIzaSyBM7xfZ6ekcrWhf79KIju8kGADdjeHRSp4&q=${data.name}`;
     document.querySelector("#lcont").append(currentt,namediv,dataw );
