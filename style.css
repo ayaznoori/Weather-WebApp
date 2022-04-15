@@ -94,7 +94,8 @@ iframe{
         width: 100%;
     }
     #left{
-        padding-left: 30px;
+        width: 100%;
+        padding-left: 15px;
         height: fit-content;
     }
     #lcont{
@@ -104,4 +105,15 @@ iframe{
         padding-top: 50px;
         gap: 10px;
      }
+     iframe{
+         width: 90%;
+     }
+     form{
+        padding-left: 10px;
+ 
+     }
+     #userinput{
+         width: 70%;
+     }
+
   }
